@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html {
+    text-transform: uppercase;
+}
+.container {
+    display: grid;
+    color: red;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 100px 300px 250px;
+    grid-template-areas: 
+    "head menu menu menu"
+    "hero hero hero hero"
+    "main main svoje image"
+    "main main svoje extra"
+    "banner banner banner banner";
+    
+  
+}
+.container > * {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.header {
+    background-color: chartreuse;
+    grid-area: head;
+}
+.menu {
+    background-color: chocolate;
+    grid-area: menu;
+}
+.hero {
+    background-color: firebrick;
+    grid-area: hero;
+}
+.main {
+    background-color: saddlebrown;
+grid-area: main;
+}
+.banner {
+    background-color: seagreen;
+grid-area: banner;
+}
+.extra {
+    background-color: seashell;
+    grid-area: extra;
+}
+.image {
+    background-color: skyblue;
+    grid-area: image;
+}
+.svoje {
+    background-color: slateblue;
+    grid-area: svoje;
+}
+@media (max-width: 550px){
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "hear"
+        "menu"
+        "hero"
+        "main"
+        "banner"
+        "extra"
+        "image"
+        ;
+        grid-template-rows: 100px 100px 300px 300px 250px 250px 250px;
+
+
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 600px 250px 250px;
+        grid-template-areas:
+        "head head head"
+        "hero hero hero"
+        "menu main main"
+        "menu banner banner"
+        "menu extra image"
+        ;
+    }
+}
+
